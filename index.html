@@ -61,20 +61,16 @@
 <body>
     <h1>React DOM Check</h1>
 
-    <!-- a regular div, refreshed every second to show time -->
     <div id="regularDiv">this should change</div>
     <br>
-    <!-- a div which is being updated using react -->
     <div id="reactDiv">this should change</div>
    
     <script type="text/babel">
         const rootNode = ReactDOM.createRoot(document.getElementById("reactDiv"));
 
         function renderThis() {
-            // Update regular div
+       
             document.getElementById("regularDiv").innerHTML = "<input/> <p> " + (new Date()).toString() + " </p>";
-
-            // Update react div with a styled digital clock
             const myElem = (
                 <div className="clock-container">
                     <input/>
